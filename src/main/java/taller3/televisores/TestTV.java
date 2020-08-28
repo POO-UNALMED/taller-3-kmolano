@@ -25,8 +25,6 @@ public class TestTV {
 	    System.out.println(tv1.getPrecio());
 	    System.out.println(tv1.getMarca().getNombre());
 	    System.out.println(tv1.getCanal());
-	    //Probando//
-		//Segunda prueba//
 		System.out.println("Hola mundo");
 	}
 }
