@@ -33,7 +33,9 @@ public class TV {
         return canal;
     }
     public void setCanal(int canal) {
-        this.canal = canal;
+        if(this.estado && (canal >=1 && canal<=120)){
+            this.canal = canal;
+        }
     }
 
     //Precio
@@ -81,18 +83,18 @@ public class TV {
         this.estado = true;
     }
     public  void turnOff(){
-        this.estado = true;
+        this.estado = false;
     }
 
     //Subir de canal
     public void canalUp(){
-        if ((this.estado==true) && this.canal<120 && this.canal>=1){
+        if ((this.estado) && (this.canal<120 && this.canal>=1)){
             this.canal++;
         }
     }
     //Bajar de canal
     public void canalDown(){
-        if((this.estado==true) && this.canal<=120 && this.canal>1)
+        if((this.estado) && (this.canal<=120 && this.canal>1))
         this.canal--;
     }
 

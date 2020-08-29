@@ -19,13 +19,13 @@ public class Control {
 
     //Subir de canal
     public void canalUp(){
-        if (tv.estado && tv.canal<120 && tv.canal>=1){
+        if ((tv.estado) && (tv.canal<120 && tv.canal>=1)){
             tv.canal++;
         }
     }
     //Bajar canal
     public void canalDown(){
-        if(tv.estado && tv.canal<=120 && tv.canal>1)
+        if((tv.estado) && (tv.canal<=120 && tv.canal>1))
             tv.canal--;
     }
 
@@ -43,7 +43,9 @@ public class Control {
 
     //SET canal
     public void setCanal(int canal) {
-        tv.canal = canal;
+        if(tv.estado && (canal >=1 && canal<=120)){
+            tv.canal = canal;
+        }
     }
 
 
