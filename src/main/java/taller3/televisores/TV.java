@@ -11,11 +11,12 @@ public class TV {
 
     //Constructor sobre marca y estado
     public TV(){
-
+        numTV++;
     }
     public TV(Marca marca, boolean estado) {
         this.marca = marca;
         this.estado = estado;
+        numTV++;
     }
 
     //Metodos SET and GET
@@ -85,13 +86,13 @@ public class TV {
 
     //Subir de canal
     public void canalUp(){
-        if (this.estado && this.canal<120 && this.canal>=1){
+        if ((this.estado==true) && this.canal<120 && this.canal>=1){
             this.canal++;
         }
     }
     //Bajar de canal
     public void canalDown(){
-        if(this.estado && this.canal<=120 && this.canal>1)
+        if((this.estado==true) && this.canal<=120 && this.canal>1)
         this.canal--;
     }
 
